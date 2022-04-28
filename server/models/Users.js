@@ -34,6 +34,10 @@ User.init(
         isEmail: true
       },
     },
+    review_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   },
   {
     hooks: {
