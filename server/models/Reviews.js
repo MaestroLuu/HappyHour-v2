@@ -11,6 +11,10 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    rest_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     time: {
       type: DataTypes.DATE,
       notEmpty: false,
@@ -24,13 +28,17 @@ Review.init(
       },
     },
     review: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "review",
